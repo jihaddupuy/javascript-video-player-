@@ -7,3 +7,14 @@ const toggle = player.querySelector('.toggle')
 const skipButtons = player.querySelectorAll('[data-skip]')
 
 
+function togglePlay(){
+    const method = video.paused ? 'play' : 'pause'
+    video[method]()
+}
+
+
+
+// add eventlisteners 
+
+video.addEventListener('click', togglePlay)
+toggle.addEventListener('click', togglePlay)
